@@ -4,7 +4,7 @@
   "description": "Waxan ku dhisay PERNstack (Postgresql Expressjs Reactjs NodeJs)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "@prisma/client": "^4.11.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "nodemon": "^2.0.21",
     "prisma": "^4.11.0"
   }
 }
