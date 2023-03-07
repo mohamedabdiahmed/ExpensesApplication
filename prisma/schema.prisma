@@ -21,4 +21,7 @@ model User{
   userName String 
   email String @unique
   password String
+  roles ROLES @default(user)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
 }
