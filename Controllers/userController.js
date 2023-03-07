@@ -21,6 +21,23 @@ const getAllUsers = async(req,res,next)=>{
     }
 }
 
+const getbyId =async(req,res,next)=>{
+    const {getbyId} = req.params;
+    const users = await prisma.User.findUnique({
+        where:{userId:+getbyId}
+    });
+    try {
+        res.status(200).json({
+            message: `user ${getbyId}`
+        })
+    } catch (error) {
+        res.status(404).json({
+            message: `ma jiro wax user ah`
+        });
+    };
+};
+
 module.exports = {
-    getAllUsers
+    getAllUsers,
+    getbyId
 }
