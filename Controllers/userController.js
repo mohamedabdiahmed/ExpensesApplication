@@ -3,7 +3,7 @@ const prisma = new PrismaClient()
 
 const getAllUsers = async(req,res,next)=>{
     const {userName,email,password} = req.body;
-    const users = await prisma.Users.findMany({
+    const users = await prisma.User.findMany({
         where:{
             userName,
             email,
